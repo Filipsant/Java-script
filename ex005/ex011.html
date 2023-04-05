@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual Pais </title>
+</head>
+<body>
+    <h1>Verifique se Você é Brasileiro</h1>
+   
+        <input type="text" name="pais" id="ipais">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="res"></div>
+    
+    <script>
+     function verificar(){
+        var nac = window.document.getElementById('ipais')
+        var res = window.document.querySelector ('div#res')
+        var inac = nac.value
+        res.innerHTML = `seu pais de origem  é  ${nac.value}`
+       if(nac.value == "Brasil" || nac.value == 'brasil'){
+        res.innerHTML += ` voce é Brasileiro`
+       }else{
+        res.innerHTML += ` voce é Estrangeiro`
+       }
+     }
+    </script>
+</body>
+</html>
